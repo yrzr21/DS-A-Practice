@@ -1,1 +1,5 @@
 .vscode
+*.exe
+lc_template.cpp
+template.cpp
+.gitignore
