@@ -108,5 +108,5 @@ void primes_euler(int n)
 int main()
 {
     // primes_ai(100);
-    primes_euler(100);
+    primes_euler(10);
 }
