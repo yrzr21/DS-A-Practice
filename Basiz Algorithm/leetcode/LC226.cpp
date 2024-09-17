@@ -8,18 +8,26 @@
 #include <stack>
 using namespace std;
 
+class Solution
+{
+public:
+    TreeNode *invertTree(TreeNode *root)
+    {
+        if (root == nullptr)
+            return nullptr;
+        TreeNode *tmp = root->left;
+        root->left = root->right;
+        root->right = tmp;
+
+        invertTree(root->left);
+        invertTree(root->right);
+        return root;
+    }
+};
+
 int main()
 {
 }
-
-struct ListNode
-{
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
 
 struct TreeNode
 {
